@@ -1,0 +1,86 @@
+@import "_vars";
+
+.browsers {
+    @include flexBox(column, center);
+    margin-bottom: 2rem;
+
+    &__head {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+    }
+    &__text {
+        text-align: center;
+        font-size: 1.2rem;
+        margin: auto;
+        width: 35%;
+        line-height: 2rem;
+        color: hsl(229, 8%, 60%);
+        margin-bottom: 4rem;
+    }
+    &__cards {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        @media (min-width: 800px) and (max-width: 1024px) and (orientation: landscape) {
+    
+            &{
+                @include flexBox(column, center);
+                margin: 2rem;
+            }
+            
+          }
+
+        @media (min-width: 481px) and (max-width: 799px) {
+    
+            &{
+                @include flexBox(column, center);
+                margin: 1rem .5rem;
+            }
+            
+        }
+        @media (min-width: 320px) and (max-width: 480px) {
+            
+            &{
+                @include flexBox(column, center);
+                margin: 1rem .5rem;
+            }
+            
+        }
+        
+        .card {
+            @include flexBox(column, center);
+            margin: 4rem 1rem;
+            padding: 2rem;
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+            -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+            overflow: hidden;
+            height: fit-content;
+
+            .title {
+                font-size: 1.8rem;
+                margin: 2rem 0 0 0;
+                color: #333;
+            }
+            .version {
+                font-size: 1.2rem;
+                color: hsl(229, 8%, 60%);
+            }
+            .dots {
+                margin: 2rem 0;
+                
+            }
+        }
+        .chrome {
+            margin-top: 0;
+        }
+        .firefox {
+            margin-top: 3rem;
+        }
+        .opera {
+            margin-top: 6rem;
+        }
+    }
+}

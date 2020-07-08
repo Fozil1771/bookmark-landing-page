@@ -1,0 +1,123 @@
+@import "_vars";
+.features {
+    @include flexBox(column, center);
+
+    &-sub {
+        text-align: center;
+        margin-bottom: 4rem;
+        
+        &__title {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        &__text {
+            font-size: 1.2rem;
+            margin: auto;
+            width: 35%;
+            line-height: 2rem;
+            color: hsl(229, 8%, 60%);
+        }
+    }
+    &__sliders {
+        @include flexBox(row, center);
+        margin: 2rem;
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+            &{
+                padding: 2rem;
+                @include flexBox(column, center);
+            }
+            
+          }
+          
+          @media (min-width: 481px) and (max-width: 767px) {
+            
+            &{
+                margin: 2rem;
+                @include flexBox(column, center);
+            }
+            
+          }
+          
+          @media (min-width: 320px) and (max-width: 480px) {
+            
+            &{
+                @include flexBox(column, center);
+            }
+            
+          }
+
+        .sliders__info {
+            text-transform: capitalize;
+            text-decoration: none;
+            margin: 1rem 3rem;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: hsl(229, 8%, 60%);
+            padding-bottom: 10px;
+
+            &:hover {
+                color: hsl(0, 94%, 66%);;
+            }
+
+            &.active {
+                color: #333;
+                border-bottom: 2px solid hsl(0, 94%, 66%);
+            }
+        }
+    }
+
+    .content {
+        @include flexBox(row, center);
+        padding: 4rem;
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+            &{
+                padding: 2rem;
+                @include flexBox(column, center);
+            }
+            
+          }
+          
+          @media (min-width: 481px) and (max-width: 767px) {
+            
+            &{
+                @include flexBox(column, center);
+            }
+            
+          }
+          
+          @media (min-width: 320px) and (max-width: 480px) {
+            
+            &{
+                @include flexBox(column, center);
+            }
+            
+          }
+
+        &-svg {
+            margin: auto 2rem;
+        }
+        
+
+        &__info {
+            @include flexBox(column, center);
+            padding: 4rem;
+            margin: auto 2rem;
+            width: 35rem;
+
+            &-title {
+                font-size: 2.5rem;
+                font-weight: 500;
+                color: #333;
+                margin: 0;
+            }
+            &-text {
+                font-size: 1.4rem;
+                margin: 2rem 0;
+                color: hsl(229, 8%, 60%);
+                line-height: 2rem;
+            }
+        }
+    }
+}
